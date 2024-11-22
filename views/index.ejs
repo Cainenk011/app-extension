@@ -1,19 +1,64 @@
-<%- include ('partials/head.ejs') %>
-
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head.ejs') %>
 <body>
+  <header class="header">
+    <%- include('../views/partials/header.ejs') %>
+  </header>
 
-  <%- include('partials/nav') %>
+  <section class="hero">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="/images/slide1.jpg" alt="Imagen 1">
+        <img src="/images/slide2.jpg" alt="Imagen 2">
+        <img src="/images/slide3.jpg" alt="Imagen 3">
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
 
-  <!-- Contenido principal -->
-  <main>
-    <section class="content">
-      <h1>Bienvenido a la Dirección de Extensión Universitaria</h1>
-      <p>Seleccione una opción en el menú para obtener más información.</p>
-    </section>
-  </main>
+  <nav class="accordion-menu">
+    <button class="accordion-btn" data-target="info-general">
+      <i class="icon">📢</i> Información general de la dirección
+    </button>
+    <div class="accordion-content" id="info-general">
+      <%- include ('partials/generalInfo.ejs') %>
+    </div>
 
-  <footer>
-    <%- include('partials/footer') %>
+    <button class="accordion-btn" data-target="objetivos">
+      <i class="icon">🎯</i> Objetivos
+    </button>
+    <div class="accordion-content" id="objetivos">
+      <%- include ('partials/objetives.ejs') %>
+    </div>
+
+    <button class="accordion-btn" data-target="programas-activos">
+      <i class="icon">📋</i> Programas activos
+    </button>
+    <div class="accordion-content" id="programas-activos">
+      <% include ('partials/programs.ejs') %>
+    </div>
+
+    <button class="accordion-btn" data-target="capacitaciones">
+      <i class="icon">💡</i> Inscripción a capacitaciones
+    </button>
+    <div class="accordion-content" id="capacitaciones">
+      <%- include('partials/trainings.ejs') %>
+    </div>
+
+    <button class="accordion-btn" data-target="escuela">
+      <i class="icon">🛠️</i> Escuela de oficios
+    </button>
+    <div class="accordion-content" id="escuela">
+      <p>Contenido sobre la escuela de oficios...</p>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <%- include('../views/partials/footer.ejs') %>
   </footer>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>

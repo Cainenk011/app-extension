@@ -2,25 +2,20 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-//se configura EJS como motor de templates
-
+// Configuración de EJS como motor de vistas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-//configuramos los archivos estáticos
-
+// Middleware para manejar archivos estáticos (CSS, JS, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
-//se añaden las rutas principales
+// Rutas
+const indexRoutes = require('./routes/Routes_index');
+app.use('/', indexRoutes);
 
-const indexRouter = require('./routes/Routes_index');
-app.use('/', indexRouter);
-
-
-//Configuramos el servidor
-
-const PORT = process.env.PORT || 3100;
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+// Servidor en escucha
+app.listen(3100, () => {
+  console.log('Servidor corriendo en http://localhost:3100');
 });
+
 

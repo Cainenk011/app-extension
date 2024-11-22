@@ -1,0 +1,141 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+  }
+  /* Header */ 
+  header {
+    text-align: center;
+    color: white;
+  }
+  
+  .frase {
+    background-color: #F5842B;
+    font-family: "Zain", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 200px; /* Reduce el tamaño del logo */
+    height: auto;
+  }
+  
+  .hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  
+  /* Accordion */
+  .accordion-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  .accordion-btn {
+    background-color: #F5842B;
+    color: white;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .accordion-btn i {
+    margin-right: 0.5rem;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #F9F9F9;
+    color: #333;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .accordion-content p {
+    margin: 1rem 0;
+  }
+  
+  .accordion-content.active {
+    max-height: 200px;
+  }
+  
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-section img {
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción del logo */
+}
+
+.footer .rights-message {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+  .logo {
+    width: 150px; /* Ajusta el tamaño del logo en pantallas pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+      padding: 1rem; /* Menos espacio en pantallas pequeñas */
+  }
+  
+  .footer-section img {
+      width: 120px; /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+}
+
+
