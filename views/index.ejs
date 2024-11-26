@@ -9,12 +9,12 @@
   <section class="hero">
     <div class="slider-container">
       <div class="slider">
-        <img src="/images/slide1.jpg" alt="Imagen 1">
-        <img src="/images/slide2.jpg" alt="Imagen 2">
-        <img src="/images/slide3.jpg" alt="Imagen 3">
+        <img class="slider-image" src= "images/PROGRAMAS ACTIVOS.png" alt="Imagen 1">
+        <img class="slider-image" src="images/PROGRAMAS ACTIVOS (2).png" alt="Imagen 2">
+        <img class="slider-image" src="images/PROGRAMAS ACTIVOS (3).png" alt="Imagen 3">
       </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <button class="slider-button prev" onclick="moveSlide(-1)">&#8249;</button>
+      <button class="slider-button next" onclick="moveSlide(1)">&#8250;</button>
     </div>
   </section>
 
@@ -37,7 +37,7 @@
       <i class="icon">📋</i> Programas activos
     </button>
     <div class="accordion-content" id="programas-activos">
-      <% include ('partials/programs.ejs') %>
+      <%- include ('partials/programs.ejs') %>
     </div>
 
     <button class="accordion-btn" data-target="capacitaciones">
@@ -60,5 +60,6 @@
   </footer>
 
   <script src="/js/script.js"></script>
+  <script src="/js/slider.js"></script>
 </body>
 </html>
