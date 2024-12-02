@@ -20,3 +20,45 @@
     border: 1px solid #ccc;
     width: 80%;
   }
+/* Archivo styles2.css */
+  form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+  form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+  form input, form select, form button {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+  form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+  form button:hover {
+  background-color: #45a049;
+}
+.image-offer {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+}
