@@ -14,8 +14,7 @@ const indexRoutes = require('./routes/Routes_index');
 app.use('/', indexRoutes);
 
 // Servidor en escucha
-app.listen(3100, () => {
-  console.log('Servidor corriendo en http://localhost:3100');
+const port = process.env.PORT || 3100;
+app.listen(port, () => {
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
-
-
