@@ -14,7 +14,7 @@ header {
 }
 
 .frase {
-  background-color: #F5842B;
+  background-color: #af8dff;
   font-family: "Zain", sans-serif;
   font-weight: 800;
   text-align: center;
@@ -100,7 +100,7 @@ header {
 }
 
 .accordion-btn {
-  background-color: #F5842B;
+  background-color: #af8dff;
   color: white;
   border: none;
   padding: 1rem;
@@ -166,7 +166,7 @@ header {
 @media (max-width: 768px) {
   .logo {
       width: 150px; /* Ajusta el tamaño del logo en pantallas pequeñas */
-      
+      transform: scale(2.5)
   }
 
   .footer {
